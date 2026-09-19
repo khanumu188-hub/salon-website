@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura Luxury Hair Lounge | Bespoke Haircuts, Balayage & Spa Treatments</title>
+  <meta name="description" content="Experience bespoke haircuts, luminous balayage coloring, and relaxing botanical hair spa treatments at Aura Luxury Hair Lounge. Friendly master stylists, transparent pricing, and effortless online booking.">
+  <meta name="keywords" content="hair salon, balayage, haircut, hair color, luxury salon, hair spa, stylist appointment, scalp treatment">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. TOP ANNOUNCEMENT BAR
+       ========================================================================= -->
+  <aside class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-status">
+        <span class="status-dot" id="salon-status-dot"></span>
+        <span id="salon-status-text">Open Now &bull; Closes at 8:00 PM</span>
+      </div>
+      <div class="top-promo">
+        ✨ First Visit? Use code <strong style="text-decoration: underline; cursor:pointer;" onclick="navigator.clipboard?.writeText('AURAVIP20'); window.showToast('Code AURAVIP20 copied!');">AURAVIP20</strong> for 20% off all color & spa services!
+      </div>
+      <div class="top-contact">
+        <span>📞 (555) 349-2871</span>
+        <span>📍 452 Belmont Avenue, Suite 100</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       2. STICKY NAVBAR
+       ========================================================================= -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo" id="main-brand-logo">
+        <div class="brand-icon">A</div>
+        <span>AURA <span class="text-gradient">LOUNGE</span></span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#style-quiz" class="nav-link">Style Finder Quiz</a></li>
+          <li><a href="#transformations" class="nav-link">Transformations</a></li>
+          <li><a href="#stylists" class="nav-link">Master Stylists</a></li>
+          <li><a href="#pricing-calculator" class="nav-link">Price Calculator</a></li>
+          <li><a href="#lookbook" class="nav-link">Lookbook</a></li>
+          <li><a href="#reviews" class="nav-link">Reviews</a></li>
+          <li><a href="#contact" class="nav-link">Location & Hours</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="theme-toggle-btn" title="Toggle Light / Dark Mode" aria-label="Toggle theme">
+          🌙
+        </button>
+        <button class="btn btn-primary btn-sm" data-open-booking id="nav-book-btn">
+          Book Online
+        </button>
+        <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         3. HERO SECTION
+         ========================================================================= -->
+    <section class="hero" id="home">
+      <div class="hero-bg-glow"></div>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge-pill">
+            <span class="rating-stars">★★★★★</span>
+            <span>4.9 / 5 Rated &bull; 1,400+ Happy Clients</span>
+          </div>
+          
+          <h1 class="hero-title">
+            Where Artistry Meets <br><span class="text-gradient">Hair Perfection.</span>
+          </h1>
+          
+          <p class="hero-description">
+            Step into a welcoming haven of warmth, elegance, and tailored hair craftsmanship. From luminous, seamless balayage to couture precision cuts and revitalizing scalp spas — our friendly master stylists bring your dream hair to life.
+          </p>
+          
+          <div class="hero-cta-group">
+            <button class="btn btn-primary btn-lg" data-open-booking id="hero-book-cta">
+              Book Your Experience ➔
+            </button>
+            <a href="#style-quiz" class="btn btn-secondary btn-lg" id="hero-quiz-cta">
+              Find Your Style Quiz ✨
+            </a>
+          </div>
+
+          <div class="hero-features">
+            <div class="hero-stat-item">
+              <span class="stat-number">15+</span>
+              <span class="stat-label">Years of Mastery</span>
+            </div>
+            <div class="hero-stat-item">
+              <span class="stat-number">99.4%</span>
+              <span class="stat-label">Client Satisfaction</span>
+            </div>
+            <div class="hero-stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Cruelty-Free Botanicals</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-image-wrapper">
+            <img src="assets/images/hero_salon.jpg" alt="Aura Luxury Hair Lounge interior" id="hero-main-img">
+          </div>
+
+          <!-- Interactive Floating Cards -->
+          <div class="hero-floating-card card-top">
+            <div class="card-icon-box">🎨</div>
+            <div class="card-text">
+              <h4>Master Colorists</h4>
+              <p>Custom Blended Toners</p>
+            </div>
+          </div>
+
+          <div class="hero-floating-card card-bottom">
+            <div class="card-icon-box">🌿</div>
+            <div class="card-text">
+              <h4>Head Spa Lounge</h4>
+              <p>Organic Scalp Therapy</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. INTERACTIVE STYLE & HAIR FINDER QUIZ
+         ========================================================================= -->
+    <section class="section quiz-teaser-section" id="style-quiz">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Interactive Style Guide</span>
+          <h2 class="section-title">Not Sure What Look Fits You Best?</h2>
+          <p class="section-subtitle">Take our 30-second personalized hair quiz to discover the exact haircut, color tone, and treatment customized for your hair texture and vibe.</p>
+        </div>
+
+        <div class="quiz-card-wrapper">
+          <div class="quiz-header">
+            <h3>Find Your Signature Look</h3>
+            <p>Step-by-step recommendation crafted by our creative directors</p>
+          </div>
+
+          <div class="quiz-progress-bar-container">
+            <div class="quiz-progress-fill" id="quiz-progress-fill"></div>
+          </div>
+
+          <div class="quiz-body">
+            <!-- Step 1: Hair Length / Type -->
+            <div class="quiz-step active" id="quiz-step-1">
+              <h4 class="quiz-question-title">1. What is your current hair length or texture?</h4>
+              <div class="quiz-options-grid">
+                <div class="quiz-option-card selected" data-group="length" data-value="short">
+                  <div class="option-icon-circle">✂</div>
+                  <span class="option-label">Short / Pixie / Bob</span>
+                  <span class="option-desc">Above shoulders</span>
+                </div>
+                <div class="quiz-option-card" data-group="length" data-value="medium">
+                  <div class="option-icon-circle">💁‍♀️</div>
+                  <span class="option-label">Medium / Collarbone</span>
+                  <span class="option-desc">Versatile length</span>
+                </div>
+                <div class="quiz-option-card" data-group="length" data-value="long">
+                  <div class="option-icon-circle">🌊</div>
+                  <span class="option-label">Long / Flowing</span>
+                  <span class="option-desc">Past shoulder blades</span>
+                </div>
+                <div class="quiz-option-card" data-group="length" data-value="textured">
+                  <div class="option-icon-circle">🌀</div>
+                  <span class="option-label">Curly / Coily / Textured</span>
+                  <span class="option-desc">Natural curl patterns</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2: Goal / Vibe -->
+            <div class="quiz-step" id="quiz-step-2">
+              <h4 class="quiz-question-title">2. What is your primary hair transformation goal?</h4>
+              <div class="quiz-options-grid">
+                <div class="quiz-option-card selected" data-group="goal" data-value="color">
+                  <div class="option-icon-circle">✨</div>
+                  <span class="option-label">Luminous Balayage</span>
+                  <span class="option-desc">Warm dimensional highlights</span>
+                </div>
+                <div class="quiz-option-card" data-group="goal" data-value="refresh">
+                  <div class="option-icon-circle">💇</div>
+                  <span class="option-label">Chic Cut & Shape</span>
+                  <span class="option-desc">Frame face & healthy ends</span>
+                </div>
+                <div class="quiz-option-card" data-group="goal" data-value="spa">
+                  <div class="option-icon-circle">💆‍♀️</div>
+                  <span class="option-label">Scalp Spa & Repair</span>
+                  <span class="option-desc">Deep hydration & detox</span>
+                </div>
+                <div class="quiz-option-card" data-group="goal" data-value="glow">
+                  <div class="option-icon-circle">🌟</div>
+                  <span class="option-label">High-Shine Gloss</span>
+                  <span class="option-desc">Glass hair reflection</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3: Daily Routine -->
+            <div class="quiz-step" id="quiz-step-3">
+              <h4 class="quiz-question-title">3. How much time do you like spending on morning styling?</h4>
+              <div class="quiz-options-grid">
+                <div class="quiz-option-card selected" data-group="routine" data-value="quick">
+                  <div class="option-icon-circle">⚡</div>
+                  <span class="option-label">5-10 Mins (Wash & Go)</span>
+                  <span class="option-desc">Effortless & low maintenance</span>
+                </div>
+                <div class="quiz-option-card" data-group="routine" data-value="polished">
+                  <div class="option-icon-circle">🔥</div>
+                  <span class="option-label">15-25 Mins (Blowout/Heat)</span>
+                  <span class="option-desc">Sleek styling & soft waves</span>
+                </div>
+                <div class="quiz-option-card" data-group="routine" data-value="luxury">
+                  <div class="option-icon-circle">👑</div>
+                  <span class="option-label">Salon Obsessed</span>
+                  <span class="option-desc">Loves luxury routine & care</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Result Step -->
+            <div class="quiz-step" id="quiz-step-result">
+              <div class="quiz-result-card">
+                <span class="quiz-result-badge">Perfect Match Found</span>
+                <h3 class="quiz-result-name" id="quiz-result-title">Signature Honey Balayage & Gloss</h3>
+                <p class="quiz-result-details" id="quiz-result-desc">
+                  Based on your answers, our hand-painted Balayage with customized tone glossing and botanical bond builder will deliver unmatched warmth and luminous shine.
+                </p>
+
+                <div class="quiz-result-stats">
+                  <div class="result-stat-pill" id="quiz-result-duration">⏱ Duration: 2h 45m</div>
+                  <div class="result-stat-pill" id="quiz-result-price">🏷 Est. Price: $195</div>
+                  <div class="result-stat-pill" id="quiz-result-stylist">✂ Recommended Artist: Elena Vance</div>
+                </div>
+
+                <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+                  <button class="btn btn-primary btn-lg" id="quiz-book-recommended-btn">
+                    Book This Recommended Look ➔
+                  </button>
+                  <button class="btn btn-secondary" id="quiz-restart-btn">
+                    Retake Quiz ↺
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="quiz-footer-actions">
+              <button class="btn btn-secondary btn-sm" id="quiz-prev-btn" style="visibility: hidden;">
+                ← Back
+              </button>
+              <button class="btn btn-primary" id="quiz-next-btn">
+                Continue ➔
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. SERVICES & TREATMENT MENU
+         ========================================================================= -->
+    <section class="section services-section" id="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Curated Offerings</span>
+          <h2 class="section-title">Our Signature Services</h2>
+          <p class="section-subtitle">Every service includes an in-depth consultation, relaxing botanical shampoo massage, and personalized styling advice.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="category-tabs">
+          <button class="tab-btn active" data-filter="all">All Services</button>
+          <button class="tab-btn" data-filter="cut">Haircuts & Styling</button>
+          <button class="tab-btn" data-filter="color">Balayage & Color</button>
+          <button class="tab-btn" data-filter="spa">Treatments & Scalp Spa</button>
+          <button class="tab-btn" data-filter="bridal">Bridal & Special Occasions</button>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="services-grid">
+          <!-- Card 1 -->
+          <div class="service-card" data-category="cut">
+            <span class="service-badge">Client Favorite</span>
+            <div class="service-header">
+              <h3 class="service-title">Couture Cut & Finish</h3>
+              <span class="service-price">$85</span>
+            </div>
+            <div class="service-meta">
+              <span>⏱ 60 Mins</span>
+              <span>✂ All Hair Types</span>
+            </div>
+            <p class="service-desc">Precision haircut personalized to your bone structure and hair density, finished with a signature voluminous blowout.</p>
+            <div class="service-footer">
+              <span style="font-size:0.85rem; color:var(--text-muted);">Includes scalp massage</span>
+              <button class="btn btn-outline btn-sm" data-open-booking data-service="Couture Cut & Finish" data-price="$85" data-stylist="Marcus Stone">Book Now</button>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="service-card" data-category="color">
+            <span class="service-badge">Signature</span>
+            <div class="service-header">
+              <h3 class="service-title">Luxe Hand-Painted Balayage</h3>
+              <span class="service-price">$195</span>
+            </div>
+            <div class="service-meta">
+              <span>⏱ 165 Mins</span>
+              <span>✨ Custom Toning Included</span>
+            </div>
+            <p class="service-desc">Seamless, sun-kissed dimension customized to your natural base. Includes gloss glaze and bonded repair treatment.</p>
+            <div class="service-footer">
+              <span style="font-size:0.85rem; color:var(--text-muted);">Master Colorist</span>
+              <button class="btn btn-primary btn-sm" data-open-booking data-service="Luxe Hand-Painted Balayage" data-price="$195" data-stylist="Elena Vance">Book Now</button>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="service-card" data-category="color">
+            <div class="service-header">
+              <h3 class="service-title">Full Dimension Foil Highlights</h3>
+              <span class="service-price">$175</span>
+            </div>
+            <div class="service-meta">
+              <span>⏱ 150 Mins</span>
+              <span>🎨 High Lift Blonding</span>
+            </div>
+            <p class="service-desc">Multi-tonal foil placement for maximum brightness or contrast from roots to tips, sealed with a neutralizing gloss.</p>
+            <div class="service-footer">
+              <span style="font-size:0.85rem; color:var(--text-muted);">Root to tip brightness</span>
+              <button class="btn btn-outline btn-sm" data-open-booking data-service="Full Dimension Foil Highlights" data-price="$175" data-stylist="Elena Vance">Book Now</button>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="service-card" data-category="spa">
+            <span class="service-badge">Zen Wellness</span>
+            <div class="service-header">
+              <h3 class="service-title">Botanical Scalp Head Spa</h3>
+              <span class="service-price">$120</span>
+            </div>
+            <div class="service-meta">
+              <span>⏱ 75 Mins</span>
+              <span>🌿 Organic Aromatherapy</span>
+            </div>
+            <p class="service-desc">Japanese-inspired detoxifying scalp scrub, pressure-point cranial massage, warm towel compress, and deep steam moisture therapy.</p>
+            <div class="service-footer">
+              <span style="font-size:0.85rem; color:var(--text-muted);">Ultimate Relaxation</span>
+              <button class="btn btn-outline btn-sm" data-open-booking data-service="Botanical Scalp Head Spa" data-price="$120" data-stylist="Sophia Laurent">Book Now</button>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="service-card" data-category="spa">
+            <div class="service-header">
+              <h3 class="service-title">Keratin Silk Smoothing Therapy</h3>
+              <span class="service-price">$240</span>
+            </div>
+            <div class="service-meta">
+              <span>⏱ 120 Mins</span>
+              <span>🛡 4 Months Anti-Frizz</span>
+            </div>
+            <p class="service-desc">Formaldehyde-free intensive smoothing treatment that eliminates 95% of frizz, enhances shine, and cuts blow-dry time in half.</p>
+            <div class="service-footer">
+              <span style="font-size:0.85rem; color:var(--text-muted);">Silky frizz control</span>
+              <button class="btn btn-outline btn-sm" data-open-booking data-service="Keratin Silk Smoothing Therapy" data-price="$240" data-stylist="Sophia Laurent">Book Now</button>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="service-card" data-category="bridal">
+            <span class="service-badge">VIP Special</span>
+            <div class="service-header">
+              <h3 class="service-title">Bridal Hair & Updo Couture</h3>
+              <span class="service-price">$210</span>
+            </div>
+            <div class="service-meta">
+              <span>⏱ 90 Mins</span>
+              <span>👰 Veil & Accessory Placement</span>
+            </div>
+            <p class="service-desc">Exquisite wedding hairstyles, romantic textured waves, or sleek chignons tailored for photography and all-day celebration.</p>
+            <div class="service-footer">
+              <span style="font-size:0.85rem; color:var(--text-muted);">Includes trial consultation</span>
+              <button class="btn btn-outline btn-sm" data-open-booking data-service="Bridal Hair & Updo Couture" data-price="$210" data-stylist="Sophia Laurent">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. INTERACTIVE BEFORE & AFTER TRANSFORMATION SHOWCASE
+         ========================================================================= -->
+    <section class="section transformation-section" id="transformations">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Visible Results</span>
+          <h2 class="section-title">See The Transformation</h2>
+          <p class="section-subtitle">Drag the slider horizontally to reveal how our custom color formulation and styling rejuvenates lifeless hair into luminous, silky dimension.</p>
+        </div>
+
+        <div class="comparison-container" id="hair-comparison-container">
+          <span class="comparison-badge badge-before">Before Treatment</span>
+          <span class="comparison-badge badge-after">After Transformation</span>
+
+          <div class="comparison-image-wrapper">
+            <!-- After image (base) -->
+            <img src="assets/images/trans_after.jpg" alt="Honey caramel balayage after transformation" class="comparison-img-after">
+
+            <!-- Before image (clipped) -->
+            <div class="comparison-img-before" id="comparison-before-layer">
+              <img src="assets/images/trans_before.jpg" alt="Hair before treatment" style="width: 900px; height: 100%; object-fit: cover;">
+            </div>
+          </div>
+
+          <!-- Draggable Slider Handle -->
+          <div class="comparison-slider-handle" id="comparison-slider-handle">
+            <div class="slider-handle-button" aria-label="Drag to compare before and after">
+              ⇄
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 36px;">
+          <p style="font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 18px;">
+            Service shown: <strong>Signature Caramel Balayage & Botanical Gloss Treatment</strong> by Master Colorist Elena.
+          </p>
+          <button class="btn btn-primary" data-open-booking data-service="Luxe Hand-Painted Balayage" data-price="$195" data-stylist="Elena Vance">
+            Book Your Own Transformation ➔
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. MEET OUR MASTER STYLISTS
+         ========================================================================= -->
+    <section class="section stylists-section" id="stylists">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Our Artists</span>
+          <h2 class="section-title">Meet Your Hair Artisans</h2>
+          <p class="section-subtitle">Warm, attentive, and globally trained. Our stylists take the time to listen, understand your routine, and craft looks that elevate your natural confidence.</p>
+        </div>
+
+        <div class="stylists-grid">
+          <!-- Stylist 1 -->
+          <div class="stylist-card">
+            <div class="stylist-img-box">
+              <img src="assets/images/stylist_elena.jpg" alt="Elena Vance - Master Colorist">
+              <div class="stylist-rating-tag">
+                <span>★</span> 4.98 (420+ reviews)
+              </div>
+            </div>
+            <div class="stylist-content">
+              <h3 class="stylist-name">Elena Vance</h3>
+              <p class="stylist-role">Master Colorist & Balayage Educator</p>
+              <p class="stylist-bio">With 12 years of color mastery in Paris and New York, Elena is known for organic melt balayage, honey blonde tones, and seamless grey blending.</p>
+              <div class="stylist-tags">
+                <span class="stylist-tag">Balayage</span>
+                <span class="stylist-tag">Blonde Specialist</span>
+                <span class="stylist-tag">Color Correction</span>
+              </div>
+              <button class="btn btn-secondary btn-sm" style="width: 100%;" data-open-booking data-stylist="Elena Vance" data-service="Luxe Hand-Painted Balayage" data-price="$195">
+                Book with Elena ➔
+              </button>
+            </div>
+          </div>
+
+          <!-- Stylist 2 -->
+          <div class="stylist-card">
+            <div class="stylist-img-box">
+              <img src="assets/images/stylist_marcus.jpg" alt="Marcus Stone - Creative Director">
+              <div class="stylist-rating-tag">
+                <span>★</span> 4.96 (380+ reviews)
+              </div>
+            </div>
+            <div class="stylist-content">
+              <h3 class="stylist-name">Marcus Stone</h3>
+              <p class="stylist-role">Creative Director & Precision Cut Architect</p>
+              <p class="stylist-bio">Specializing in tailored geometric bobs, textured layers, and classic men’s executive styling that retains its pristine shape for weeks.</p>
+              <div class="stylist-tags">
+                <span class="stylist-tag">Precision Cuts</span>
+                <span class="stylist-tag">French Bobs</span>
+                <span class="stylist-tag">Men's Grooming</span>
+              </div>
+              <button class="btn btn-secondary btn-sm" style="width: 100%;" data-open-booking data-stylist="Marcus Stone" data-service="Couture Cut & Finish" data-price="$85">
+                Book with Marcus ➔
+              </button>
+            </div>
+          </div>
+
+          <!-- Stylist 3 -->
+          <div class="stylist-card">
+            <div class="stylist-img-box">
+              <img src="assets/images/stylist_sophia.jpg" alt="Sophia Laurent - Texture & Bridal Specialist">
+              <div class="stylist-rating-tag">
+                <span>★</span> 4.99 (510+ reviews)
+              </div>
+            </div>
+            <div class="stylist-content">
+              <h3 class="stylist-name">Sophia Laurent</h3>
+              <p class="stylist-role">Texture, Curl & Bridal Specialist</p>
+              <p class="stylist-bio">Sophia celebrates natural curl curl patterns, holistic Japanese scalp therapies, and red-carpet bridal styling that turns heads effortlessly.</p>
+              <div class="stylist-tags">
+                <span class="stylist-tag">Curl Expert</span>
+                <span class="stylist-tag">Japanese Head Spa</span>
+                <span class="stylist-tag">Bridal Updos</span>
+              </div>
+              <button class="btn btn-secondary btn-sm" style="width: 100%;" data-open-booking data-stylist="Sophia Laurent" data-service="Botanical Scalp Head Spa" data-price="$120">
+                Book with Sophia ➔
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         8. INTERACTIVE PRICE & CUSTOM PACKAGE CALCULATOR
+         ========================================================================= -->
+    <section class="section" id="pricing-calculator">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Transparent Pricing</span>
+          <h2 class="section-title">Build Your Custom Salon Package</h2>
+          <p class="section-subtitle">No surprises at the checkout desk. Select your hair length and favorite add-ons below for an immediate, transparent estimate.</p>
+        </div>
+
+        <div class="calc-grid">
+          <div class="calc-interactive-card">
+            <!-- 1. Hair Length -->
+            <div class="calc-group">
+              <h4 class="calc-group-title"><span>1.</span> Select Hair Length</h4>
+              <div class="calc-chips">
+                <button class="chip-btn active" data-calc-length data-price="0">Short (Above Shoulders) +$0</button>
+                <button class="chip-btn" data-calc-length data-price="15">Medium (Shoulder Length) +$15</button>
+                <button class="chip-btn" data-calc-length data-price="30">Long (Mid Back) +$30</button>
+                <button class="chip-btn" data-calc-length data-price="45">Extra Long / High Density +$45</button>
+              </div>
+            </div>
+
+            <!-- 2. Primary Service -->
+            <div class="calc-group">
+              <h4 class="calc-group-title"><span>2.</span> Choose Base Service</h4>
+              <div class="calc-chips">
+                <button class="chip-btn active" data-calc-service data-name="Precision Cut & Finish" data-price="85">Precision Cut ($85)</button>
+                <button class="chip-btn" data-calc-service data-name="Signature Balayage & Tone" data-price="195">Balayage & Tone ($195)</button>
+                <button class="chip-btn" data-calc-service data-name="All-Over Gloss Color Refresh" data-price="130">Color Refresh ($130)</button>
+                <button class="chip-btn" data-calc-service data-name="Botanical Scalp Spa" data-price="120">Scalp Spa ($120)</button>
+              </div>
+            </div>
+
+            <!-- 3. Luxe Add-ons -->
+            <div class="calc-group">
+              <h4 class="calc-group-title"><span>3.</span> Optional Luxury Add-ons</h4>
+              <div class="calc-addon-list">
+                <div class="addon-row" data-id="olaplex" data-name="Olaplex No. 1 & 2 Bond Repair" data-price="40">
+                  <div class="addon-left">
+                    <div class="custom-checkbox">✓</div>
+                    <div>
+                      <strong>Olaplex Bond Multiplier Treatment</strong>
+                      <div style="font-size:0.8rem; color:var(--text-muted);">Protects & rebuilds broken disulfide bonds during styling</div>
+                    </div>
+                  </div>
+                  <span class="addon-price">+$40</span>
+                </div>
+
+                <div class="addon-row" data-id="glaze" data-name="High-Shine Clear Glaze" data-price="35">
+                  <div class="addon-left">
+                    <div class="custom-checkbox">✓</div>
+                    <div>
+                      <strong>Acidic Color High-Shine Glaze</strong>
+                      <div style="font-size:0.8rem; color:var(--text-muted);">Seals cuticles with reflective mirror shine for 6 weeks</div>
+                    </div>
+                  </div>
+                  <span class="addon-price">+$35</span>
+                </div>
+
+                <div class="addon-row" data-id="scrub" data-name="Aromatherapy Scalp Scrub & Steam" data-price="30">
+                  <div class="addon-left">
+                    <div class="custom-checkbox">✓</div>
+                    <div>
+                      <strong>Exfoliating Sea Salt Scalp Scrub</strong>
+                      <div style="font-size:0.8rem; color:var(--text-muted);">Removes product buildup and stimulates follicular growth</div>
+                    </div>
+                  </div>
+                  <span class="addon-price">+$30</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Summary Sticky Column -->
+          <div class="calc-summary-card">
+            <h3 class="summary-header">Estimate Summary</h3>
+            <div class="summary-line-items" id="calc-line-items">
+              <!-- Dynamically rendered -->
+            </div>
+
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 24px;">
+              * Includes consultation, beverage bar (artisan tea, cappuccino, or champagne), and styling tips.
+            </p>
+
+            <button class="btn btn-primary" style="width: 100%;" id="book-calculated-package-btn">
+              Book This Custom Package ➔
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         9. LOOKBOOK GALLERY
+         ========================================================================= -->
+    <section class="section lookbook-section" id="lookbook">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Inspiration Gallery</span>
+          <h2 class="section-title">The Aura Lookbook</h2>
+          <p class="section-subtitle">Click on any style to view full details and book that exact look with our master stylists.</p>
+        </div>
+
+        <div class="lookbook-grid">
+          <!-- Item 1: Bob -->
+          <div class="lookbook-item" data-img="assets/images/look_bob.jpg" data-title="French Textured Chic Bob" data-stylist="Marcus Stone" data-service="Couture Cut & Finish" data-price="$85">
+            <img src="assets/images/look_bob.jpg" alt="French Chic Bob hairstyle">
+            <div class="lookbook-overlay">
+              <h4 class="lookbook-title">French Textured Bob</h4>
+              <p class="lookbook-stylist">Stylist: Marcus Stone</p>
+              <span class="btn btn-sm btn-primary" style="align-self: flex-start;">View & Book Look ➔</span>
+            </div>
+          </div>
+
+          <!-- Item 2: Copper -->
+          <div class="lookbook-item" data-img="assets/images/look_copper.jpg" data-title="Glossy Autumn Copper Waves" data-stylist="Elena Vance" data-service="Luxe Hand-Painted Balayage" data-price="$195">
+            <img src="assets/images/look_copper.jpg" alt="Glossy Copper Wavy Hair">
+            <div class="lookbook-overlay">
+              <h4 class="lookbook-title">Radiant Copper Waves</h4>
+              <p class="lookbook-stylist">Stylist: Elena Vance</p>
+              <span class="btn btn-sm btn-primary" style="align-self: flex-start;">View & Book Look ➔</span>
+            </div>
+          </div>
+
+          <!-- Item 3: Men's -->
+          <div class="lookbook-item" data-img="assets/images/look_mens.jpg" data-title="Executive Modern Taper Cut" data-stylist="Marcus Stone" data-service="Couture Cut & Finish" data-price="$85">
+            <img src="assets/images/look_mens.jpg" alt="Men's Executive Taper Haircut">
+            <div class="lookbook-overlay">
+              <h4 class="lookbook-title">Executive Taper & Beard Sculpt</h4>
+              <p class="lookbook-stylist">Stylist: Marcus Stone</p>
+              <span class="btn btn-sm btn-primary" style="align-self: flex-start;">View & Book Look ➔</span>
+            </div>
+          </div>
+
+          <!-- Item 4: Scalp Spa -->
+          <div class="lookbook-item" data-img="assets/images/salon_spa.jpg" data-title="Zen Botanical Head Spa & Wash" data-stylist="Sophia Laurent" data-service="Botanical Scalp Head Spa" data-price="$120">
+            <img src="assets/images/salon_spa.jpg" alt="Botanical Head Spa Treatment">
+            <div class="lookbook-overlay">
+              <h4 class="lookbook-title">Botanical Head Spa Lounge</h4>
+              <p class="lookbook-stylist">Stylist: Sophia Laurent</p>
+              <span class="btn btn-sm btn-primary" style="align-self: flex-start;">View & Book Look ➔</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         10. CLIENT TESTIMONIALS & REVIEWS
+         ========================================================================= -->
+    <section class="section reviews-section" id="reviews">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Loved By Clients</span>
+          <h2 class="section-title">Words from Our Community</h2>
+          <p class="section-subtitle">Real experiences from clients who found their signature style at Aura Lounge.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <!-- Review 1 -->
+          <div class="review-card">
+            <div>
+              <div class="review-stars">★★★★★</div>
+              <p class="review-quote">
+                “Elena is a hair magician! I went in with dull brunette hair and walked out with the most gorgeous honey-caramel balayage of my life. The complimentary head massage and cappuccino made it feel like a 5-star getaway.”
+              </p>
+            </div>
+            <div class="reviewer-meta">
+              <div class="reviewer-avatar">CL</div>
+              <div>
+                <div class="reviewer-name">Claire Lambert</div>
+                <div class="reviewer-service">Balayage & Gloss &bull; Verified Client</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="review-card">
+            <div>
+              <div class="review-stars">★★★★★</div>
+              <p class="review-quote">
+                “Finding Marcus was a gamechanger for my bob haircut. He took the time to study how my hair naturally falls. Four weeks later and my haircut still looks pristine and effortless every morning!”
+              </p>
+            </div>
+            <div class="reviewer-meta">
+              <div class="reviewer-avatar">MR</div>
+              <div>
+                <div class="reviewer-name">Maya Rodriguez</div>
+                <div class="reviewer-service">Precision Bob Cut &bull; Verified Client</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="review-card">
+            <div>
+              <div class="review-stars">★★★★★</div>
+              <p class="review-quote">
+                “The Japanese botanical scalp spa by Sophia cured my dry winter scalp in one session. The warm steam towels and essential oils are pure heaven. I already booked my next 3 appointments!”
+              </p>
+            </div>
+            <div class="reviewer-meta">
+              <div class="reviewer-avatar">SJ</div>
+              <div>
+                <div class="reviewer-name">Sarah Jenkins</div>
+                <div class="reviewer-service">Botanical Head Spa &bull; Verified Client</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         11. FREQUENTLY ASKED QUESTIONS (FAQ)
+         ========================================================================= -->
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Got Questions?</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Search or explore answers regarding consultations, coloring prep, and aftercare routines.</p>
+        </div>
+
+        <div class="faq-search-box">
+          <span class="faq-search-icon">🔍</span>
+          <input type="text" id="faq-search-input" class="faq-search-input" placeholder="Search questions (e.g., balayage, deposit, consultation)...">
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item active">
+            <button class="faq-question">
+              <span>Do I need to wash my hair before a coloring or balayage appointment?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              We recommend coming in with clean, dry hair washed 24 to 48 hours prior. Hair free from heavy dry shampoo or root touch-up sprays allows our colorists to formulate the most even, radiant tone.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Is an initial consultation included with my booking?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Yes! Every appointment starts with a complimentary 10-minute 1-on-1 consultation where your stylist analyzes hair health, face shape, daily routine, and lifestyle goals.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What is your cancellation and rescheduling policy?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              We understand plans change! We kindly ask for at least 24 hours notice to reschedule or cancel your appointment free of charge via your online confirmation pass or phone.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Are your hair products safe, cruelty-free, and organic?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Absolutely. We exclusively use premium, certified cruelty-free, sulfate-free, and ammonia-low Italian & Japanese salon brands enriched with botanical oils and bond multipliers.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         12. LOCATION, LIVE HOURS & CONTACT
+         ========================================================================= -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Visit Our Sanctuary</span>
+          <h2 class="section-title">Location & Salon Hours</h2>
+          <p class="section-subtitle">Conveniently located in the Belmont arts district with dedicated complimentary valet parking for all clients.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Hours & Info -->
+          <div class="contact-info-card">
+            <div class="contact-info-item">
+              <div class="contact-icon">📍</div>
+              <div class="contact-text">
+                <h4>Studio Address</h4>
+                <p>452 Belmont Avenue, Suite 100, West District</p>
+                <p style="font-size:0.85rem; color:var(--accent-gold); margin-top:4px;">Valet parking available at front entrance</p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-icon">📞</div>
+              <div class="contact-text">
+                <h4>Contact & Bookings</h4>
+                <p>Phone: <strong>(555) 349-2871</strong></p>
+                <p>Email: concierge@auraloungehair.com</p>
+              </div>
+            </div>
+
+            <div class="contact-info-item" style="margin-bottom:0;">
+              <div class="contact-icon">🕒</div>
+              <div class="contact-text" style="width: 100%;">
+                <h4>Weekly Opening Hours</h4>
+                <table class="hours-table">
+                  <tbody>
+                    <tr><td>Monday</td><td>9:00 AM – 8:00 PM</td></tr>
+                    <tr><td>Tuesday</td><td>9:00 AM – 8:00 PM</td></tr>
+                    <tr><td>Wednesday</td><td>9:00 AM – 8:00 PM</td></tr>
+                    <tr><td>Thursday</td><td>9:00 AM – 8:00 PM</td></tr>
+                    <tr><td>Friday</td><td>9:00 AM – 8:00 PM</td></tr>
+                    <tr><td>Saturday</td><td>9:00 AM – 8:00 PM</td></tr>
+                    <tr><td>Sunday</td><td>10:00 AM – 6:00 PM</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map Mockup Card -->
+          <div class="map-visual-card">
+            <div class="map-overlay-box">
+              <div class="map-pin-icon">📍</div>
+              <h3 style="font-size: 1.6rem; margin-bottom: 8px;">Aura Luxury Hair Lounge</h3>
+              <p style="font-size: 0.95rem; color: #E0DDD7; margin-bottom: 20px;">452 Belmont Avenue, Suite 100</p>
+              <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                Open in Google Maps ➔
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         13. VIP NEWSLETTER DISCOUNT CARD
+         ========================================================================= -->
+    <div class="container">
+      <div class="vip-card">
+        <div class="vip-text">
+          <h3>Unlock 20% Off Your First Visit</h3>
+          <p>Join the Aura VIP Circle for seasonal hair trend previews, private flash sales, and complimentary treatment upgrades.</p>
+        </div>
+        <form class="vip-form" id="vip-newsletter-form">
+          <input type="email" id="vip-email-input" class="vip-input" placeholder="Enter your email address..." required>
+          <button type="submit" class="btn btn-primary">Claim 20% Off</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       14. FOOTER
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo" style="margin-bottom: 14px;">
+            <div class="brand-icon">A</div>
+            <span>AURA <span class="text-gradient">LOUNGE</span></span>
+          </div>
+          <p>A bespoke luxury hair lounge dedicated to effortless beauty, precision techniques, and warm client-centric hospitality.</p>
+          <div class="social-links">
+            <a href="#" class="social-btn" aria-label="Instagram">📷</a>
+            <a href="#" class="social-btn" aria-label="Pinterest">📌</a>
+            <a href="#" class="social-btn" aria-label="Facebook">📘</a>
+            <a href="#" class="social-btn" aria-label="TikTok">🎵</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Services Menu</a></li>
+            <li><a href="#style-quiz">Style Finder Quiz</a></li>
+            <li><a href="#transformations">Transformations</a></li>
+            <li><a href="#stylists">Master Stylists</a></li>
+            <li><a href="#pricing-calculator">Price Calculator</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Experiences</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Hand-Painted Balayage</a></li>
+            <li><a href="#services">Botanical Head Spa</a></li>
+            <li><a href="#services">Couture French Bobs</a></li>
+            <li><a href="#services">Bridal Packages</a></li>
+            <li><a href="#contact">VIP Private Room</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Salon Concierge</h4>
+          <p style="font-size:0.92rem; margin-bottom: 12px;">Have special questions or bridal party inquiries? Contact our team directly.</p>
+          <button class="btn btn-primary btn-sm" data-open-booking style="width: 100%;">
+            Book Appointment
+          </button>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Aura Luxury Hair Lounge. All rights reserved.</span>
+        <span>Crafted with botanical care & modern elegance.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       15. ONLINE BOOKING MODAL SYSTEM
+       ========================================================================= -->
+  <div class="modal-backdrop" id="booking-modal">
+    <div class="booking-modal-window">
+      <button class="modal-close-btn" id="close-booking-modal-btn" aria-label="Close booking modal">✕</button>
+
+      <div class="booking-modal-header">
+        <h3>Reserve Your Appointment</h3>
+        <p style="color:var(--text-secondary); font-size:0.92rem;">Experience bespoke hair care in just a few quick steps</p>
+
+        <div class="booking-stepper">
+          <div class="stepper-step active" data-step="1">
+            <span class="stepper-num">1</span>
+            <span>Service</span>
+          </div>
+          <div class="stepper-step" data-step="2">
+            <span class="stepper-num">2</span>
+            <span>Stylist</span>
+          </div>
+          <div class="stepper-step" data-step="3">
+            <span class="stepper-num">3</span>
+            <span>Date & Time</span>
+          </div>
+          <div class="stepper-step" data-step="4">
+            <span class="stepper-num">4</span>
+            <span>Details</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="booking-modal-body">
+        <!-- Step 1: Select Service -->
+        <div class="booking-step-pane active" id="booking-pane-1">
+          <h4 style="font-size:1.15rem; margin-bottom:14px;">Select Your Service</h4>
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            <div class="addon-row modal-service-option active" data-name="Couture Cut & Finish" data-price="85" data-duration="60 mins">
+              <div>
+                <strong>Couture Cut & Finish</strong>
+                <div style="font-size:0.82rem; color:var(--text-muted);">Includes consultation, scalp massage & blowout</div>
+              </div>
+              <span class="addon-price">$85</span>
+            </div>
+
+            <div class="addon-row modal-service-option" data-name="Luxe Hand-Painted Balayage" data-price="195" data-duration="165 mins">
+              <div>
+                <strong>Luxe Hand-Painted Balayage & Gloss</strong>
+                <div style="font-size:0.82rem; color:var(--text-muted);">Custom tone blending, Olaplex repair & styling</div>
+              </div>
+              <span class="addon-price">$195</span>
+            </div>
+
+            <div class="addon-row modal-service-option" data-name="Botanical Scalp Head Spa" data-price="120" data-duration="75 mins">
+              <div>
+                <strong>Botanical Scalp Head Spa</strong>
+                <div style="font-size:0.82rem; color:var(--text-muted);">Japanese scalp scrub, cranial massage & steam</div>
+              </div>
+              <span class="addon-price">$120</span>
+            </div>
+
+            <div class="addon-row modal-service-option" data-name="Full Dimension Foil Highlights" data-price="175" data-duration="150 mins">
+              <div>
+                <strong>Full Dimension Foil Highlights</strong>
+                <div style="font-size:0.82rem; color:var(--text-muted);">Bright root-to-tip lightening with tone glaze</div>
+              </div>
+              <span class="addon-price">$175</span>
+            </div>
+
+            <div class="addon-row modal-service-option" data-name="Bridal Hair & Updo Couture" data-price="210" data-duration="90 mins">
+              <div>
+                <strong>Bridal Hair & Updo Couture</strong>
+                <div style="font-size:0.82rem; color:var(--text-muted);">Romantic textured updo or glamorous waves</div>
+              </div>
+              <span class="addon-price">$210</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2: Select Stylist -->
+        <div class="booking-step-pane" id="booking-pane-2">
+          <h4 style="font-size:1.15rem; margin-bottom:14px;">Select Your Preferred Stylist</h4>
+          <div class="stylist-pick-grid">
+            <div class="stylist-pick-card selected" data-name="Elena Vance" data-role="Master Colorist">
+              <div class="stylist-pick-avatar">
+                <img src="assets/images/stylist_elena.jpg" alt="Elena Vance">
+              </div>
+              <div class="stylist-pick-name">Elena Vance</div>
+              <div class="stylist-pick-role">Master Colorist (★ 4.98)</div>
+            </div>
+
+            <div class="stylist-pick-card" data-name="Marcus Stone" data-role="Creative Director">
+              <div class="stylist-pick-avatar">
+                <img src="assets/images/stylist_marcus.jpg" alt="Marcus Stone">
+              </div>
+              <div class="stylist-pick-name">Marcus Stone</div>
+              <div class="stylist-pick-role">Precision Cuts (★ 4.96)</div>
+            </div>
+
+            <div class="stylist-pick-card" data-name="Sophia Laurent" data-role="Texture Specialist">
+              <div class="stylist-pick-avatar">
+                <img src="assets/images/stylist_sophia.jpg" alt="Sophia Laurent">
+              </div>
+              <div class="stylist-pick-name">Sophia Laurent</div>
+              <div class="stylist-pick-role">Curls & Head Spa (★ 4.99)</div>
+            </div>
+
+            <div class="stylist-pick-card" data-name="Any Available Master Stylist" data-role="First Available">
+              <div class="stylist-pick-avatar" style="background:var(--accent-gold-soft); display:flex; align-items:center; justify-content:center; font-size:1.5rem; color:var(--accent-gold);">
+                ✨
+              </div>
+              <div class="stylist-pick-name">First Available</div>
+              <div class="stylist-pick-role">Fastest Slot</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3: Date & Time -->
+        <div class="booking-step-pane" id="booking-pane-3">
+          <h4 style="font-size:1.15rem; margin-bottom:14px;">Pick Date & Time Slot</h4>
+          <div class="date-time-grid">
+            <div class="calendar-control-box">
+              <label class="form-label" style="margin-bottom:8px; display:block;">Select Appointment Date:</label>
+              <input type="date" id="booking-date-input" class="calendar-input">
+              <p style="font-size:0.8rem; color:var(--text-muted); margin-top:10px;">
+                Appointments available up to 60 days in advance.
+              </p>
+            </div>
+
+            <div class="time-slots-wrapper">
+              <h5>Available Time Slots:</h5>
+              <div class="time-slots-grid">
+                <button class="time-slot-btn" data-time="09:30 AM">09:30 AM</button>
+                <button class="time-slot-btn selected" data-time="11:00 AM">11:00 AM</button>
+                <button class="time-slot-btn" data-time="01:30 PM">01:30 PM</button>
+                <button class="time-slot-btn" data-time="03:00 PM">03:00 PM</button>
+                <button class="time-slot-btn" data-time="04:30 PM">04:30 PM</button>
+                <button class="time-slot-btn" data-time="06:00 PM">06:00 PM</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4: Contact & Summary -->
+        <div class="booking-step-pane" id="booking-pane-4">
+          <h4 style="font-size:1.15rem; margin-bottom:14px;">Your Contact Information</h4>
+          <div class="booking-form-grid">
+            <div class="form-group">
+              <label class="form-label">Full Name *</label>
+              <input type="text" id="client-name-input" class="form-input" placeholder="e.g. Jessica Miller" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Phone Number *</label>
+              <input type="tel" id="client-phone-input" class="form-input" placeholder="(555) 000-0000" required>
+            </div>
+
+            <div class="form-group full-width">
+              <label class="form-label">Email Address (for instant pass & calendar sync)</label>
+              <input type="email" id="client-email-input" class="form-input" placeholder="jessica@example.com">
+            </div>
+
+            <div class="form-group full-width">
+              <label class="form-label">Hair Notes / Inspiration Requests (Optional)</label>
+              <textarea id="client-notes-input" class="form-input" rows="2" placeholder="Let us know if you have sensitive scalp, previous color history, etc."></textarea>
+            </div>
+
+            <div class="form-group full-width">
+              <label class="form-label">Have a VIP Promo Code?</label>
+              <div class="promo-apply-box">
+                <input type="text" id="booking-promo-input" class="form-input" placeholder="Enter code (e.g. AURAVIP20)">
+                <button type="button" class="btn btn-secondary" id="apply-promo-btn">Apply</button>
+              </div>
+              <div id="promo-status-msg" style="font-size:0.85rem; margin-top:4px;"></div>
+            </div>
+          </div>
+
+          <!-- Price Summary Preview -->
+          <div style="background:var(--bg-secondary); padding:16px 20px; border-radius:var(--radius-md); margin-top:20px; border:1px solid var(--border-color);">
+            <div style="display:flex; justify-content:space-between; margin-bottom:6px; font-size:0.92rem;">
+              <span>Service Subtotal:</span>
+              <span id="modal-subtotal-price">$85.00</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; margin-bottom:6px; font-size:0.92rem; color:#2ECC71;">
+              <span>VIP Discount:</span>
+              <span id="modal-discount-price">-$0.00</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; font-weight:700; font-size:1.15rem; padding-top:8px; border-top:1px dashed var(--border-color);">
+              <span>Estimated Total Due at Salon:</span>
+              <span id="modal-total-price" style="color:var(--accent-gold);">$85.00</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 5: Confirmation VIP Pass -->
+        <div class="booking-step-pane" id="booking-pane-5">
+          <div class="confirmation-pass">
+            <div class="pass-header">
+              <div>
+                <span class="section-tag" style="margin-bottom:4px; font-size:0.75rem;">Confirmed Pass</span>
+                <h3 style="font-size:1.5rem; color:#FFFFFF;">AURA LUXURY LOUNGE</h3>
+              </div>
+              <div class="pass-id" id="pass-booking-ref">AURA-829410</div>
+            </div>
+
+            <div class="pass-grid">
+              <div>
+                <div class="pass-item-label">Guest Name</div>
+                <div class="pass-item-val" id="pass-client-name">Jessica Miller</div>
+              </div>
+              <div>
+                <div class="pass-item-label">Service</div>
+                <div class="pass-item-val" id="pass-service-name">Couture Cut & Finish</div>
+              </div>
+              <div>
+                <div class="pass-item-label">Stylist</div>
+                <div class="pass-item-val" id="pass-stylist-name">Elena Vance</div>
+              </div>
+              <div>
+                <div class="pass-item-label">Scheduled Date & Time</div>
+                <div class="pass-item-val" id="pass-datetime">Oct 24 at 11:00 AM</div>
+              </div>
+              <div>
+                <div class="pass-item-label">Studio Address</div>
+                <div class="pass-item-val" style="font-size:0.95rem;">452 Belmont Ave, Suite 100</div>
+              </div>
+              <div>
+                <div class="pass-item-label">Total Amount Due</div>
+                <div class="pass-item-val" id="pass-total-amount" style="color:var(--accent-gold);">$85.00</div>
+              </div>
+            </div>
+
+            <div class="pass-barcode">
+              <div class="barcode-lines">||| | |||| || ||||| |||| | |||</div>
+              <span style="font-size:0.75rem; color:#A09E99; letter-spacing:1px;">SHOW THIS PASS AT CHECK-IN</span>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+            <button class="btn btn-primary" id="print-pass-btn">
+              🖨 Print / Save VIP Pass
+            </button>
+            <button class="btn btn-secondary" id="book-another-btn">
+              Book Another Appointment
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="booking-modal-footer">
+        <button class="btn btn-secondary" id="booking-prev-btn">
+          ← Previous
+        </button>
+        <button class="btn btn-primary" id="booking-next-btn">
+          Continue ➔
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       16. LOOKBOOK PREVIEW MODAL
+       ========================================================================= -->
+  <div class="modal-backdrop" id="lookbook-preview-modal">
+    <div class="preview-modal-content">
+      <button class="modal-close-btn" id="close-lookbook-modal-btn">✕</button>
+      <div class="preview-img-box">
+        <img src="" id="lookbook-preview-img" alt="Hairstyle preview">
+      </div>
+      <div class="preview-info-box">
+        <div>
+          <h3 id="lookbook-preview-title" style="font-size:1.4rem; margin-bottom:4px;"></h3>
+          <p id="lookbook-preview-stylist" style="color:var(--text-secondary); font-size:0.92rem;"></p>
+        </div>
+        <button class="btn btn-primary" id="lookbook-preview-book-btn">
+          Book This Look ➔
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       17. FLOATING QUICK ACTION BUTTONS
+       ========================================================================= -->
+  <div class="floating-actions">
+    <button class="fab-btn fab-whatsapp" title="Chat on WhatsApp" onclick="window.showToast('💬 Opening WhatsApp Concierge: +1 (555) 349-2871');">
+      💬
+    </button>
+    <button class="fab-btn fab-book" title="Book Appointment Now" data-open-booking>
+      ✂
+    </button>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container"></div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/quiz.js"></script>
+  <script src="js/booking.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
